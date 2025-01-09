@@ -1,38 +1,194 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'TanNimbus'; /* Nom que vous utiliserez dans votre CSS */
+  src: url('./assets/fonts/tan-nimbus.otf') format('opentype'); /* Chemin et format */
+  font-weight: normal; /* Poids de la police (normal, bold, etc.) */
+  font-style: normal; /* Style de la police (normal, italic, etc.) */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Outfit'; /* Nom que vous utiliserez dans votre CSS */
+  src: url('./assets/fonts/Outfit.ttf') format('truetype'); /* Chemin et format TrueType */
+  font-weight: normal; /* Poids de la police (normal, bold, etc.) */
+  font-style: normal; /* Style de la police (normal, italic, etc.) */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --green: #0C3C29;
+  --beige: #FFEDB6;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+body {
+  background-color: var(--green);
+
+}
+
+
+/* NAV BAR */
+.navBar {
   display: flex;
-  flex-direction: column;
+  list-style-type: none ;
+  margin-left: 10rem;
+  margin-top: 2rem;
+}
+
+.navBar a {
+  font-family: 'Outfit';
+  font-style: light ;
+  font-weight: 100; ;
+  color: var(--beige);
+  font-size: 1rem;
+  text-decoration: none;
+  margin-right: 30px;
+
+}
+
+ul {
+  padding-inline-start: 0px !important;
+}
+
+p{
+  font-family: 'Outfit';
+  font-style: light ;
+  font-weight: 100; ;
+  color: var(--beige);
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0 5rem;
+}
+
+h3 {
+  font-family: 'TanNimbus';;
+  font-weight: 400; ;
+  color: var(--beige);
+  font-size: 1rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+
 }
 
-.App-link {
-  color: #61dafb;
+h4{
+  margin-top: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.box {
+  background-color: #093121;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 4rem;
+}
+
+/* HOME */
+.name{
+  margin-left: 10rem;
+  margin-top: 6rem;
+}
+.name h1 {
+  font-family: 'TanNimbus';
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--beige);
+  letter-spacing: 2px;
+}
+
+.name h2 {
+  font-family: 'TanNimbus';
+  font-weight: 400;
+  color: var(--beige);
+  margin-top: 3.5rem;
+}
+
+.bar {
+  color: var(--beige);
+  margin-left: 10rem;
+  padding: auto 0;
+  font-weight: 900;
+  font-style: bold;
+}
+
+.icon-home {
+  font-size: 2rem;
+  padding: auto;
+  margin-right: 0.5rem;
+
+}
+
+.social {
+  margin-left: 1rem;
+}
+
+.arrow-down-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.arrow-down {
+  font-size: 1.5rem;
+  font-weight: 300;
+  background-color: var(--beige);
+  color: var(--green);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+
+  margin-top: 1rem;
+  transform: scale(0.8);
+}
+
+/* SKILLS */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Crée 4 colonnes de largeur égale */
+  gap: 1rem; /* Espace entre les éléments */
+  margin-left: 5rem;
+  margin-right: 10rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center; /* Centre verticalement le contenu */
+
+  border: solid 1.5px var(--beige);
+  border-radius: 50px;
+  height: 3.5rem;
+  width: 8.9rem;
+  padding-left: 1rem;
+
+  &:hover{
+    box-shadow: 0 0 10px 0 var(--beige);
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+}
+
+.skill h5 {
+  font-family: 'Outfit';
+  color: var(--beige);
+  font-weight: 100;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.skills img {
+  width: 35px;
+  height: auto;
+  ;
+}
+
+.skills-titles{
+    margin-top: 3rem;
+
+
 }
