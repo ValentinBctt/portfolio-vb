@@ -41,6 +41,12 @@ body {
   font-size: 1rem;
   text-decoration: none;
   margin-right: 30px;
+  padding-bottom: 0.3rem;
+
+  &:hover {
+
+    border-bottom: solid 3px var(--beige)
+  }
 
 }
 
@@ -55,7 +61,7 @@ p{
   color: var(--beige);
   font-size: 1rem;
   text-decoration: none;
-  padding: 0 5rem;
+
 }
 
 h3 {
@@ -82,7 +88,9 @@ h4{
   padding: 2rem;
   border-radius: 10px;
   margin: 2rem 4rem;
+  box-shadow: 2px 4px 10px 0px rgba(33, 33, 33, 0.8);
 }
+
 
 /* HOME */
 .name{
@@ -123,6 +131,13 @@ h4{
   margin-left: 1rem;
 }
 
+.social a {
+  color: var(--beige);
+
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
 .arrow-down-container {
   display: flex;
   justify-content: center;
@@ -146,6 +161,35 @@ h4{
 
   margin-top: 1rem;
   transform: scale(0.8);
+}
+
+/* ABOUT */
+
+.about-me {
+  display: flex;
+  gap: 0;
+
+}
+.photo {
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin: auto 5rem auto 0;
+
+  flex-shrink: 0;
+  box-shadow: 20px 10px 0px 0px var(--beige);
+
+}
+
+.about-me p {
+  padding: 0 0 0 5rem;
+}
+
+
+
+.text {
+  margin-right: 5rem;
 }
 
 /* SKILLS */
@@ -189,6 +233,167 @@ h4{
 
 .skills-titles{
     margin-top: 3rem;
+    margin-left: 5rem;
+}
 
 
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.project {
+  background-color: var(--green);
+  border-radius: 10px;
+
+  box-shadow: 2px 4px 10px 0px rgba(33, 33, 33, 0.8);
+  transition: 0.3s ease-in-out;
+
+  &:hover{
+    box-shadow: 0 0 10px 0 var(--beige);
+    transform: scale(1.02);
+  }
+
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+  margin: 0 !important;
+}
+
+.project p {
+  padding-left: 1em;
+
+}
+
+.languages {
+  display: flex;
+  margin-left: 1rem;
+}
+
+.language {
+  display: flex; /* Active flexbox */
+  align-items: center; /* Centre verticalement */
+  justify-content: center; /* Centre horizontalement */
+  border: solid 1px var(--beige);
+  border-radius: 20px;
+  width: 3rem;
+  height: 1.5rem;
+  margin-right: 0.7rem;
+  margin-bottom: 2rem;
+
+  &:hover {
+
+    background-color: var(--beige);
+    p{
+      color: var(--green);
+    }
+  }
+}
+
+.language p {
+  font-size: 0.7rem;
+  margin: 0; /* Supprime les marges par défaut */
+  padding: 0; /* Supprime tout padding */
+}
+
+
+/* Training */
+
+.trainings {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 colonnes égales */
+  grid-auto-rows: minmax(10rem, auto);  /* Hauteur minimale des lignes */
+  gap: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.le-wagon {
+  background-color: var(--green);
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px 0px rgba(33, 33, 33, 0.8);
+  grid-column: 1/3;  /* Première colonne */
+  grid-row: 1;  /* Première ligne */
+  display: flex;
+  flex-direction: column;  /* Organiser les éléments en colonne */
+  justify-content: space-between;  /* Distribuer l'espace entre l'image et le texte */
+  height: auto;  /* Permet à l'élément de s'adapter à son contenu */
+  padding: 1rem;
+
+}
+
+.le-wagon img{
+  width: 100%;
+  height: 200px;  /* Hauteur fixe pour éviter des ajustements trop grands */
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.le-wagon p {
+  padding: 0.5em;
+  font-size: 0.8rem;
+  flex-grow: 1;  /* Le texte occupe l'espace restant, si nécessaire */
+  margin-bottom: 0!important;  /* Supprime la marge par défaut */;
+}
+
+.react-course, .digital-marketing {
+  background-color: var(--green);
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px 0px rgba(33, 33, 33, 0.8);
+
+}
+
+.react-course img, .digital-marketing img {
+  width: 100%;
+  height: 200px;  /* Fixe la hauteur pour éviter que l'image soit trop grande */
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.react-course p, .digital-marketing p {
+  padding: 1em;
+  font-size: 0.8rem;
+  margin-bottom: 0!important;
+}
+
+
+/* Contact */
+
+.contact-resume {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+  align-items: center; /* Optionnel, aligne verticalement les éléments au centre */
+  justify-content: center
+}
+
+.contact p {
+
+}
+
+
+.resume a {
+  font-family: 'Outfit';
+  color: var(--beige);
+  text-decoration: none;
+  font-weight: 100;
+  font-size: 1rem;
+  border: solid 1px var(--beige);
+  border-radius: 15px;
+  padding: 0.5rem 1rem;
+  display: inline-flex; /* S'assure que le lien est un élément en ligne pour être aligné avec le texte */
+  align-items: center; /* Pour centrer l'icône et le texte à l'intérieur du lien */
+  gap: 0.5rem; /* Espace entre l'icône et le texte */
+
+  &:hover {
+    background-color: var(--beige);
+    color: var(--green);
+  }
 }
