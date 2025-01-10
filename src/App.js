@@ -99,18 +99,7 @@ function AboutMe() {
               à concevoir des solutions qui allient technique et créativité.{" "}
               <br />
               <br />
-              <strong>🎯 Mes compétences clés :</strong>
-              <br />
-              Développement front-end : création de maquettes et interfaces
-              utilisateur (Figma, HTML, CSS, JavaScript, React).
-              <br />
-              Développement back-end : mise en place de bases de données,
-              gestion des API, et construction de fonctionnalités dynamiques
-              (Ruby on Rails). Construction d’applications web UX-friendly.
-              Ecoute et adaptation des besoins client. Expérience en gestion de
-              projets e-commerce et digital marketing.
-              <br />
-              <br />
+             
               <strong>💡 Pourquoi travailler avec moi ?</strong>
               <br />
               Je suis quelqu’un de curieux et à l’écoute, qui aime comprendre
