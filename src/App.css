@@ -307,27 +307,38 @@ h4{
 /* Training */
 
 .training {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Deux colonnes : 1/3 pour la liste, 2/3 pour le contenu */
   gap: 2rem;
   width: 100%;
-  flex-wrap: nowrap; /* Empêche de revenir à la ligne */
 }
 
 .course-list {
+  grid-column: 1; /* Place .course-list dans la première colonne */
   list-style-type: none;
-  padding: 0;
+  padding: 2rem 0 ;
   margin: 0;
-  width: 30%; /* Ajustez pour la largeur souhaitée */
+  width: 100%; /* Prend toute la largeur de sa colonne */
   min-width: 200px; /* Largeur minimale pour garantir une bonne lisibilité */
 }
 
+.course p {
+  margin: 0 !important;
+}
+
 .course {
+  padding: 1rem 1rem;
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
   cursor: pointer;
+  border-radius: 20px;
+
+
+  &:hover {
+    background-color: var(--green);
+  }
 }
 
 .course-photo {
@@ -343,23 +354,25 @@ h4{
 }
 
 .selected-course {
-  flex: 1; /* Prend tout l'espace restant */
+  grid-column: 2; /* Place .selected-course dans la deuxième colonne */
   padding: 1rem;
-  border: 1px solid #ccc;
+
   border-radius: 10px;
-  
+  ;
 }
 
 .selected-course img {
   width: 100%;
-  max-width: 300px;
-  height: auto;
+
+  height: max(200px, 30vh);
+  object-fit: cover;
   margin-bottom: 1rem;
 }
 
 h3, h4 {
   margin: 10px 0;
 }
+
 
 
 

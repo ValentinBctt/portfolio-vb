@@ -62,7 +62,6 @@ export function Training() {
             </li>
           ))}
         </ul>
-      </div>
 
       {activeCourse && (
         <div className="selected-course">
@@ -70,12 +69,13 @@ export function Training() {
             src={activeCourse.photo}
             alt={activeCourse.title}
             className="selected-course-photo"
-          />
-          <h3>{activeCourse.title}</h3>
-          <h4>{activeCourse.description}</h4>
+            />
+          <p><strong>{activeCourse.title}</strong></p>
+          <p>{activeCourse.description}</p>
         </div>
       )}
     </div>
+      </div>
     </>
   );
 }

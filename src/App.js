@@ -7,39 +7,60 @@ import { MyProjects } from "./MyProjects";
 import { Training } from "./Training";
 import { ContactResume } from "./ContactResume";
 
+
 export default function App() {
   return (
     <div>
       <NavBar />
       <HomePage />
-      <AboutMe />
-      <Skills />
-      <MyProjects />
-      <Training />
-      <ContactResume />
+      <div id="about-me">
+        <AboutMe />
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
+      <div id="projects">
+        <MyProjects />
+      </div>
+      <div id="training">
+        <Training />
+      </div>
+      <div id="contact-resume">
+        <ContactResume />
+      </div>
     </div>
   );
 }
 
 function NavBar() {
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute("href");
+    const element = document.querySelector(target);
+    element.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const navLinks = [
+    { id: "about-me", text: "About me" },
+    { id: "skills", text: "Skills" },
+    { id: "projects", text: "Projects" },
+    { id: "training", text: "Training" },
+    { id: "contact-resume", text: "Contact & Resume" },
+  ];
+
   return (
     <nav>
       <ul className="navBar">
-        <li>
-          <a href="/About me">About me</a>
-        </li>
-        <li>
-          <a href="/Skills">Skills</a>
-        </li>
-        <li>
-          <a href="/MyProjects">My Projects</a>
-        </li>
-        <li>
-          <a href="/Training">Training</a>
-        </li>
-        <li>
-          <a href="/Contact&Resume">Contact & Resume</a>
-        </li>
+        {navLinks.map((link) => (
+          <li key={link.id}>
+            <a href={`#${link.id}`} onClick={handleScroll}>
+              {link.text}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );
@@ -99,7 +120,7 @@ function AboutMe() {
               à concevoir des solutions qui allient technique et créativité.{" "}
               <br />
               <br />
-             
+
               <strong>💡 Pourquoi travailler avec moi ?</strong>
               <br />
               Je suis quelqu’un de curieux et à l’écoute, qui aime comprendre
