@@ -1,3 +1,6 @@
+import { Reveal } from "./Reveal";
+import { RevealTop } from "./Reveal";
+
 const projects = [
   {
     name: "Project 1",
@@ -25,6 +28,7 @@ export function MyProjects() {
   return (
     <div className="box">
     <h3>My projects</h3>
+    <RevealTop>
     <div className="projects">
       {projects.map((project) => (
         <div className="project">
@@ -45,6 +49,7 @@ export function MyProjects() {
         </div>
       ))}
     </div>
+    </RevealTop>
     </div>
   );
 }

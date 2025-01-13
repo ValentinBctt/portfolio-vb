@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Reveal } from "./Reveal";
+import { RevealShort } from "./Reveal";
 
 const courses = [
   {id: 1,
@@ -63,19 +65,23 @@ export function Training() {
           ))}
         </ul>
 
-      {activeCourse && (
-        <div className="selected-course">
-          <img
-            src={activeCourse.photo}
-            alt={activeCourse.title}
-            className="selected-course-photo"
-            />
-          <p><strong>{activeCourse.title}</strong></p>
-          <p>{activeCourse.description}</p>
-        </div>
+            {activeCourse && (
+        <Reveal key={activeCourse.id}>
+          <div className="selected-course">
+            <RevealShort key={activeCourse.id}>
+              <img
+                src={activeCourse.photo}
+                alt={activeCourse.title}
+                className="selected-course-photo"
+              />
+              <p><strong>{activeCourse.title}</strong></p>
+              <p>{activeCourse.description}</p>
+            </RevealShort>
+          </div>
+        </Reveal>
       )}
     </div>
       </div>
-    </>
+      </>
   );
 }

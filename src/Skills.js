@@ -1,3 +1,4 @@
+import { Reveal } from "./Reveal";
 
 export function Skills() {
   const frontend = [
@@ -60,7 +61,9 @@ export function Skills() {
     <>
     <div className="box">
       <h3>Skills</h3>
+      <Reveal>
         <p className="skills-titles"><strong>Front-end</strong></p>
+
       <div className="skills">
         {frontend.map((skill, index) => (
           <div key={index} className="skill">
@@ -78,9 +81,8 @@ export function Skills() {
           </div>
         ))}
       </div>
+    </Reveal>
     </div>
     </>
   );
 }
-
-

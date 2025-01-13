@@ -6,7 +6,8 @@ import { Skills } from "./Skills";
 import { MyProjects } from "./MyProjects";
 import { Training } from "./Training";
 import { ContactResume } from "./ContactResume";
-
+import { Reveal } from "./Reveal";
+import { SlideTabs } from "./Reveal"
 
 export default function App() {
   return (
@@ -33,6 +34,8 @@ export default function App() {
 }
 
 function NavBar() {
+
+
   const handleScroll = (e) => {
     e.preventDefault();
     const target = e.target.getAttribute("href");
@@ -42,6 +45,7 @@ function NavBar() {
       block: "start",
     });
   };
+
 
   const navLinks = [
     { id: "about-me", text: "About me" },
@@ -54,12 +58,15 @@ function NavBar() {
   return (
     <nav>
       <ul className="navBar">
+
         {navLinks.map((link) => (
+
           <li key={link.id}>
             <a href={`#${link.id}`} onClick={handleScroll}>
               {link.text}
             </a>
           </li>
+
         ))}
       </ul>
     </nav>
@@ -69,6 +76,7 @@ function NavBar() {
 function HomePage() {
   return (
     <>
+    <Reveal>
       <div className="name">
         <h1>
           Valentin
@@ -77,6 +85,7 @@ function HomePage() {
         </h1>
         <h2>Front-end Developer</h2>
       </div>
+      </Reveal>
       <div className="bar">
         <h4>
           _____________________________________________________________________________________________
@@ -110,6 +119,7 @@ function AboutMe() {
       <div className="box">
         <h3>About me</h3>
         <div className="about-me">
+          <Reveal>
           <div className="text">
             <p>
               Créateur d'expériences web modernes et fonctionnelles, je me
@@ -134,6 +144,7 @@ function AboutMe() {
               digitaux. Ensemble, nous donnerons vie à vos idées !
             </p>
           </div>
+          </Reveal>
 
           <img
             src="/assets/Photo-CV2.jpg"
