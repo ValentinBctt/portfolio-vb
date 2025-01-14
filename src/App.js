@@ -211,26 +211,17 @@ function AboutMe() {
           <Reveal>
           <div className="text">
             <p>
-              Créateur d'expériences web modernes et fonctionnelles, je me
-              spécialise dans le développement web front-end tout en maîtrisant
-              les bases du full stack grâce à ma formation au Wagon. Mon
-              parcours diversifié en marketing digital et community management
-              enrichit ma capacité à comprendre les besoins des utilisateurs et
-              à concevoir des solutions qui allient technique et créativité.{" "}
-              <br />
-              <br />
+            **Creator of modern and functional web experiences**, I specialize in front-end web development while mastering the fundamentals of full-stack development thanks to my training at Le Wagon. My diverse background in digital marketing and community management enhances my ability to understand user needs and design solutions that blend technical expertise and creativity.
+<br />
+<br />
 
-              <strong>💡 Pourquoi travailler avec moi ?</strong>
-              <br />
-              Je suis quelqu’un de curieux et à l’écoute, qui aime comprendre
-              les besoins de mes clients pour créer des solutions sur-mesure.
-              Mon parcours diversifié, entre projets techniques et créativité,
-              m’a donné une grande flexibilité et un regard unique sur les
-              projets web.
-              <br />
-              <br />
-              N’hésitez pas à me contacter pour discuter de vos projets web et
-              digitaux. Ensemble, nous donnerons vie à vos idées !
+<strong>💡 Why work with me?</strong>
+<br />
+I am a curious and attentive professional who loves understanding my clients' needs to create tailor-made solutions. My diverse background, combining technical projects and creativity, has given me great flexibility and a unique perspective on web projects.
+<br />
+<br />
+
+Feel free to reach out to discuss your web and digital projects. Together, we will bring your ideas to life!
             </p>
           </div>
           </Reveal>

@@ -7,11 +7,12 @@
   import Modal from 'bootstrap/js/dist/modal'; // Importer Modal de Bootstrap
   import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
   import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+  import { faExpand } from '@fortawesome/free-solid-svg-icons';
 
   const projects = [
     {
       name: "Create.",
-      description: "Create est une appliication web d'organisation de projet artistique. Les utilisateurs peuvent créer des projets, ajouter des tâches, des deadlines, des notes, et des fichiers. Le tout sur un DashBoard complet. Ils peuvent également inviter d'autres utilisateurs à rejoindre leur projet.",
+      description: "Create is a web application for organizing artistic projects. Users can create projects, add tasks, deadlines, notes, and files, all within a comprehensive dashboard. They can also invite other users to join their projects.",
       image: "assets/projects/Create1.png",
       image2: "assets/projects/Create2.png",
       image3: "assets/projects/Create3.png",
@@ -63,6 +64,7 @@
                   <div className="project">
                     <img src={project.image} className="d-block w-100" alt={project.name} onClick={() => handleImageClick(project)} />
                     <h6><strong>{project.name}</strong></h6>
+                  <p className='full-screen'><FontAwesomeIcon icon={faExpand} /></p>
                     <p>{project.description}</p>
                     <div className="languages">
                       <div className="language">
@@ -116,6 +118,7 @@
                       <img src={project.image3} className="d-block w-100" alt={project.name} onClick={() => handleImageClick(project)} />
                     </div>
                   </div>
+                  <p className='full-screen'><FontAwesomeIcon icon={faExpand} /></p>
                   <button className="carousel-control-prev" type="button" data-bs-target={`#carouselExampleIndicators${index}`} data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Previous</span>

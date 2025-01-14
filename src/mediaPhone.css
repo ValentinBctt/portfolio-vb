@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
 
- 
+
 
 
   body {
@@ -19,17 +19,19 @@
     padding-bottom: 1rem;
     background-color: var(--dark-green);
     margin-top: 0!important;
+    margin-bottom: 5rem!important;
 
   }
 
 
   .name h1 {
+    margin-top: 13rem!important;
     font-size: 3rem!important;
     margin-left: -8rem;
   }
 
   .name h2 {
-
+    margin-top: 3rem!important;
     margin-left: -8rem;
   }
 
@@ -39,6 +41,11 @@
 
   .social {
     margin-right: 3rem;
+  }
+
+  .arrow-down {
+    margin-top: 5rem!important;
+    margin-bottom: 10rem!important;
   }
 
   .box {
@@ -61,16 +68,16 @@
   height: 200px;
   width: 200px;
   object-fit: cover;
-  margin: 0 0 1rem 0; /* Ajuster la marge pour centrer l'image */
+  margin: 0 auto!important; /* Ajuster la marge pour centrer l'image */
   flex-shrink: 0;
-  box-shadow: 20px 10px 0px 0px var(--beige);
+
 }
 
 .about-me p {
   justify-content: center!important;
   margin-top: 1.5rem;
   text-align: center; /* Centrer le texte */
-  padding: 0!important;
+  padding: 0 1rem 0 0!important;
   width: 150%!important;
 }
 
@@ -105,6 +112,7 @@
 }
 
 .project {
+  margin-top: 2rem;
   width: 100%!important;
 }
 
@@ -177,6 +185,7 @@
 
 .navBar ul {
   margin-top: 1rem!important;
+  padding-left: 1rem!important;
 }
 @media (min-width: 768px) {
   .hamburger {
@@ -191,5 +200,46 @@
 
   .navBar ul.block {
     display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1150px) {
+
+  .skills {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  .training {
+    display: flex!important;
+    flex-direction: column!important;
+    padding: 0!important;
+    gap: 0!important;
+  }
+
+  .course-list {
+    padding: 0!important;
+    margin-top: 2rem!important;
+  }
+
+  .course-list ul {
+    padding: 0!important;
+    margin-top: 4rem!important;
+  }
+
+  .course li {
+    padding: 0!important;
+    margin: 0!important;
+  }
+
+  .selected-course {
+    margin-top: 0!important;
+  }
+
+  .selected-course img {
+    height: 10rem!important;
+  }
+
+  .projects {
+    display: flex!important;
   }
 }

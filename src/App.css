@@ -205,7 +205,7 @@ h4{
   margin: auto 5rem auto 0;
 
   flex-shrink: 0;
-  box-shadow: 20px 10px 0px 0px var(--beige);
+
 
 }
 
@@ -227,6 +227,7 @@ h4{
   gap: 1rem; /* Espace entre les éléments */
   margin-left: 5rem;
   margin-right: 10rem;
+
 }
 
 .skill {
@@ -236,7 +237,7 @@ h4{
   border: solid 1.5px var(--beige);
   border-radius: 50px;
   height: 3.5rem;
-  width: 10 rem;
+  width: 10rem;
   padding-left: 1rem;
 
   &:hover{
@@ -282,27 +283,21 @@ h6 {
   margin-top: 2rem;
 }
 
-
-
-
 .project {
   background-color: var(--green);
   border-radius: 10px;
   width: 35%;
   box-shadow: 2px 4px 10px 0px rgba(33, 33, 33, 0.8);
   transition: 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative; /* Ajouté pour permettre le positionnement absolu de .full-screen */
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-
-  &:hover{
-
+  &:hover {
     transform: scale(1.03);
   }
-
-
 }
 
 .project img {
@@ -314,48 +309,40 @@ h6 {
   cursor: pointer;
 }
 
-
 .project p {
   padding-left: 1em;
-  font-size: small!important;
-
+  font-size: small !important;
 }
 
-  .project a {
+.project a {
+  text-decoration: none !important;
+  color: var(--green);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background-color: var(--beige);
+  border-radius: 20px;
+  margin: 0 auto 1rem auto;
+  padding: 0.3rem 1rem;
 
-    text-decoration: none !important;
-    color: var(--green);
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    background-color: var(--beige);
-    border-radius: 20px;
-    margin: 0 auto 1rem auto;
-    padding: 0.3rem 1rem;
-
-    &:hover {
-      background-color: var(--dark-green);
-      color: var(--beige);
-    }
+  &:hover {
+    background-color: var(--dark-green);
+    color: var(--beige);
   }
+}
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    width: 1.5rem!important; /* Ajuste la largeur */
-    height: 1.5rem!important; /* Ajuste la hauteur */
-    background-color: var(--green); /* Couleur de fond personnalisée */
-    border-radius: 50%; /* Rend l'icône circulaire */
-    color: var(--green)!important; /* Couleur de l'icône */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 1.5rem !important; /* Ajuste la largeur */
+  height: 1.5rem !important; /* Ajuste la hauteur */
+  background-color: var(--green); /* Couleur de fond personnalisée */
+  border-radius: 50%; /* Rend l'icône circulaire */
+  color: var(--green) !important; /* Couleur de l'icône */
+}
 
-  }
-
-  .carousel-control-prev-icon::before,
-  .carousel-control-next-icon::before {
-    font-size: 0.5rem!important; /* Change la taille des flèches */
-  }
-
-
-
-
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  font-size: 0.5rem !important; /* Change la taille des flèches */
+}
 
 .languages {
   display: flex;
@@ -374,9 +361,8 @@ h6 {
   margin-bottom: 2rem;
 
   &:hover {
-
     background-color: var(--beige);
-    p{
+    p {
       color: var(--green);
     }
   }
@@ -389,15 +375,14 @@ h6 {
 }
 
 .carousel-indicators [data-bs-target] {
-  width: 6px!important;
-  height: 6px!important;
+  width: 6px !important;
+  height: 6px !important;
   border-radius: 50%;
-  background-color: var(--green)!important;
-
+  background-color: var(--green) !important;
 }
 
 .carousel-indicators .active {
-  color: var(--green)!important;
+  color: var(--green) !important;
 }
 
 .modal-content {
@@ -410,7 +395,7 @@ h6 {
   background-color: var(--green);
   color: var(--beige);
   border-radius: 10px 10px 0 0;
-  border: none!important;
+  border: none !important;
 }
 
 .modal-body {
@@ -422,7 +407,16 @@ h6 {
   max-width: 80%; /* Ajustez la taille de la modal */
 }
 
+.full-screen {
+  position: absolute;
 
+  top: 3px;
+  right: 10px;
+  color: var(--green);
+}
+.full-screen p {
+  font-size: 5rem;
+}
 
 
 
@@ -463,6 +457,10 @@ padding: 0 8rem;
   &:hover {
     background-color: var(--green);
   }
+}
+
+.active-course {
+  background-color: var(--green);
 }
 
 .course-photo {
