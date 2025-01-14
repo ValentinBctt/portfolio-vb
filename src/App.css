@@ -1,3 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './mediaPhone.css';
+
+
 @font-face {
   font-family: 'TanNimbus'; /* Nom que vous utiliserez dans votre CSS */
   src: url('./assets/fonts/tan-nimbus.otf') format('opentype'); /* Chemin et format */
@@ -15,12 +22,37 @@
 :root {
   --green: #0C3C29;
   --beige: #FFEDB6;
+  --dark-green: #093121;
+}
+
+.root {
+  overflow-x: hidden;
 }
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Empêche les débordements horizontaux */
+}
+
 
 body {
-  background-color: var(--green);
+  background-color: var(--green)!important;
 
 }
 
@@ -29,26 +61,15 @@ body {
 .navBar {
   display: flex;
   list-style-type: none ;
-  margin-left: 10rem;
+  margin-left: 4rem;
   margin-top: 2rem;
 }
 
-.navBar a {
-  font-family: 'Outfit';
-  font-style: light ;
-  font-weight: 100; ;
-  color: var(--beige);
-  font-size: 1rem;
-  text-decoration: none;
-  margin-right: 30px;
-  padding-bottom: 0.3rem;
-
-  &:hover {
-
-    border-bottom: solid 2px var(--beige)
-  }
-
+.navBar li {
+  font-size: 1rem!important;
 }
+
+
 
 ul {
   padding-inline-start: 0px !important;
@@ -67,8 +88,8 @@ p{
 h3 {
   font-family: 'TanNimbus';;
   font-weight: 400; ;
-  color: var(--beige);
-  font-size: 1rem;
+  color: var(--beige)!important;
+  font-size: 1rem!important;
   text-decoration: none;
   letter-spacing: 0.5px;
   display: flex;
@@ -81,10 +102,11 @@ h3 {
 
 h4{
   margin-top: 2rem;
+
 }
 
 .box {
-  background-color: #093121;
+  background-color: var(--dark-green);
   padding: 2rem;
   border-radius: 10px;
   margin: 2rem 4rem;
@@ -95,7 +117,7 @@ h4{
 /* HOME */
 .name{
   margin-left: 10rem;
-  margin-top: 6rem;
+  margin-top: 5rem;
 }
 .name h1 {
   font-family: 'TanNimbus';
@@ -107,9 +129,11 @@ h4{
 
 .name h2 {
   font-family: 'TanNimbus';
+  font-size: 1.5rem!important;
   font-weight: 400;
   color: var(--beige);
-  margin-top: 3.5rem;
+  margin-top: 3rem!important;
+  margin-bottom: 2rem;
 }
 
 .bar {
@@ -118,6 +142,7 @@ h4{
   padding: auto 0;
   font-weight: 900;
   font-style: bold;
+  display: flex;
 }
 
 .icon-home {
@@ -129,6 +154,7 @@ h4{
 
 .social {
   margin-left: 1rem;
+  display: flex;
 }
 
 .social a {
@@ -160,6 +186,7 @@ h4{
   border-radius: 50%;
 
   margin-top: 1rem;
+  margin-bottom: 1rem;
   transform: scale(0.8);
 }
 
@@ -184,6 +211,7 @@ h4{
 
 .about-me p {
   padding: 0 0 0 5rem;
+  margin-top: 1.5rem;
 }
 
 
@@ -208,7 +236,7 @@ h4{
   border: solid 1.5px var(--beige);
   border-radius: 50px;
   height: 3.5rem;
-  width: 8.9rem;
+  width: 10 rem;
   padding-left: 1rem;
 
   &:hover{
@@ -222,7 +250,7 @@ h4{
   color: var(--beige);
   font-weight: 100;
   font-size: 1rem;
-  margin-left: 1rem;
+  margin: 1rem 1rem 1rem 1rem !important;
 }
 
 .skills img {
@@ -238,39 +266,96 @@ h4{
 
 
 /* PROJECTS */
+
+h6 {
+  color: var(--beige)!important;
+  font-family: "Outfit";
+  font-weight: 100;
+  margin: 1rem!important;
+}
 .projects {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-left: 5rem;
   margin-right: 5rem;
+  margin-top: 2rem;
 }
+
+
+
 
 .project {
   background-color: var(--green);
   border-radius: 10px;
-
+  width: 35%;
   box-shadow: 2px 4px 10px 0px rgba(33, 33, 33, 0.8);
   transition: 0.3s ease-in-out;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
   &:hover{
-    box-shadow: 0 0 10px 0 var(--beige);
-    transform: scale(1.02);
+
+    transform: scale(1.03);
   }
+
 
 }
 
 .project img {
   width: 100%;
-  height: auto;
+  height: 10rem;
+  object-fit: cover;
   border-radius: 10px 10px 0 0;
   margin: 0 !important;
+  cursor: pointer;
 }
+
 
 .project p {
   padding-left: 1em;
+  font-size: small!important;
 
 }
+
+  .project a {
+
+    text-decoration: none !important;
+    color: var(--green);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    background-color: var(--beige);
+    border-radius: 20px;
+    margin: 0 auto 1rem auto;
+    padding: 0.3rem 1rem;
+
+    &:hover {
+      background-color: var(--dark-green);
+      color: var(--beige);
+    }
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 1.5rem!important; /* Ajuste la largeur */
+    height: 1.5rem!important; /* Ajuste la hauteur */
+    background-color: var(--green); /* Couleur de fond personnalisée */
+    border-radius: 50%; /* Rend l'icône circulaire */
+    color: var(--green)!important; /* Couleur de l'icône */
+
+  }
+
+  .carousel-control-prev-icon::before,
+  .carousel-control-next-icon::before {
+    font-size: 0.5rem!important; /* Change la taille des flèches */
+  }
+
+
+
+
 
 .languages {
   display: flex;
@@ -303,6 +388,43 @@ h4{
   padding: 0; /* Supprime tout padding */
 }
 
+.carousel-indicators [data-bs-target] {
+  width: 6px!important;
+  height: 6px!important;
+  border-radius: 50%;
+  background-color: var(--green)!important;
+
+}
+
+.carousel-indicators .active {
+  color: var(--green)!important;
+}
+
+.modal-content {
+  background-color: transparent !important;
+  border: none; /* Supprimez la bordure si nécessaire */
+  box-shadow: none; /* Supprimez l'ombre si nécessaire */
+}
+
+.modal-header {
+  background-color: var(--green);
+  color: var(--beige);
+  border-radius: 10px 10px 0 0;
+  border: none!important;
+}
+
+.modal-body {
+  background-color: var(--dark-green);
+  border-radius: 0 0 10px 10px;
+}
+
+.modal-dialog {
+  max-width: 80%; /* Ajustez la taille de la modal */
+}
+
+
+
+
 
 /* Training */
 
@@ -311,6 +433,7 @@ h4{
   grid-template-columns: 1fr 2fr; /* Deux colonnes : 1/3 pour la liste, 2/3 pour le contenu */
   gap: 2rem;
   width: 100%;
+padding: 0 8rem;
 }
 
 .course-list {
@@ -324,6 +447,7 @@ h4{
 
 .course p {
   margin: 0 !important;
+
 }
 
 .course {
@@ -361,9 +485,13 @@ h4{
   ;
 }
 
+.selected-course p {
+  font-size: 0.8rem!important ;
+}
+
 .selected-course img {
   width: 100%;
-
+  border-radius: 10px 10px 0 0;
   height: max(200px, 30vh);
   object-fit: cover;
   margin-bottom: 1rem;

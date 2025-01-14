@@ -4,7 +4,7 @@ import { RevealShort } from "./Reveal";
 
 const courses = [
   {id: 1,
-    title: "Le Wagon",
+    title: "Le Wagon Web Developer Fullstack Bootcamp",
     description:
       `Lors de ma formation au Wagon, j'ai appris à concevoir et développer des applications web complètes.
       J'ai maîtrisé les bases du front-end avec HTML, CSS, JavaScript et React, ainsi
@@ -49,7 +49,7 @@ export function Training() {
         <div className="training">
         <ul className="course-list">
           {courses.map((course, index) => (
-            <li className="course" key={index} onClick={() => handleActiveCourse(course)}>
+            <li className="course" key={courses.id} onClick={() => handleActiveCourse(course)}>
               <img src={course.photo} alt={course.title} className="course-photo" />
               <div className="course-title">
                 <p>

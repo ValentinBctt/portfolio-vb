@@ -58,31 +58,28 @@ export function Skills() {
   ];
 
   return (
-    <>
     <div className="box">
       <h3>Skills</h3>
       <Reveal>
         <p className="skills-titles"><strong>Front-end</strong></p>
-
-      <div className="skills">
-        {frontend.map((skill, index) => (
-          <div key={index} className="skill">
-            <img src={skill.logo} alt={skill.title} className="logo" />
-            <h5>{skill.title}</h5>
-          </div>
-        ))}
-      </div>
-      <p className="skills-titles"><strong>Back-end</strong></p>
-      <div className="skills">
-        {backend.map((skill, index) => (
-          <div key={index} className="skill">
-            <img src={skill.logo} alt={skill.title} />
-            <h5>{skill.title}</h5>
-          </div>
-        ))}
-      </div>
-    </Reveal>
+        <div className="skills">
+          {frontend.map((skill, index) => (
+            <div key={index} className="skill">
+              <img src={skill.logo} alt={skill.title} className="logo" />
+              <h5>{skill.title}</h5>
+            </div>
+          ))}
+        </div>
+        <p className="skills-titles"><strong>Back-end</strong></p>
+        <div className="skills">
+          {backend.map((skill, index) => (
+            <div key={index} className="skill">
+              <img src={skill.logo} alt={skill.title} />
+              <h5>{skill.title}</h5>
+            </div>
+          ))}
+        </div>
+      </Reveal>
     </div>
-    </>
   );
 }
