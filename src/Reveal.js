@@ -26,7 +26,7 @@ export const Reveal = ({ children, width = "fit-content" }) => {
         transition={{ duration: 0.5, delay: 0.25 }}
         variants={{
           visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: -50 },
+          hidden: { opacity: 0, x: -5.0 },
         }}
         style={{ width: width }}
       >

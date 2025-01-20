@@ -44,7 +44,7 @@ export function Training() {
   return (
     <>
       <div className="box">
-        <h3>Formations</h3>
+        <h3>Training</h3>
         <div className="training">
           <ul className="course-list">
             {courses.map((course) => (

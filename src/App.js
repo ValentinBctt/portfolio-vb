@@ -92,7 +92,7 @@ const SlideTabs = () => {
         >
           <Tab setPosition={setPosition} onClick={() => { handleScroll('about-me'); closeMenu(); }}>About me</Tab>
           <Tab setPosition={setPosition} onClick={() => { handleScroll('skills'); closeMenu(); }}>Skills</Tab>
-          <Tab setPosition={setPosition} onClick={() => { handleScroll('projects'); closeMenu(); }}>My project</Tab>
+          <Tab setPosition={setPosition} onClick={() => { handleScroll('projects'); closeMenu(); }}>My projects</Tab>
           <Tab setPosition={setPosition} onClick={() => { handleScroll('training'); closeMenu(); }}>Training</Tab>
           <Tab setPosition={setPosition} onClick={() => { handleScroll('contact-resume'); closeMenu(); }}>Contact & Resume</Tab>
 
@@ -211,17 +211,14 @@ function AboutMe() {
           <Reveal>
           <div className="text">
             <p>
-            **Creator of modern and functional web experiences**, I specialize in front-end web development while mastering the fundamentals of full-stack development thanks to my training at Le Wagon. My diverse background in digital marketing and community management enhances my ability to understand user needs and design solutions that blend technical expertise and creativity.
-<br />
-<br />
+            As a creator of modern, functional web experiences, I am specialized in front-end web development, while mastering the basics of full stack thanks to my training at Le Wagon. <br />My diverse background in digital marketing and community management enriches my ability to understand users' needs and design solutions that combine technique and creativity.
+<br /><br />
+💡 Why should you work with me? <br />
+I'm a curious and good listener, who likes to understand my customers needs to create tailor-made solutions. My diverse background, between technical projects and creativity, has given me great flexibility and a unique perspective on web projects.
+<br /><br />
+Don't hesitate to contact me to discuss your web and digital projects. Together, we'll bring your ideas to life!
 
-<strong>💡 Why work with me?</strong>
-<br />
-I am a curious and attentive professional who loves understanding my clients' needs to create tailor-made solutions. My diverse background, combining technical projects and creativity, has given me great flexibility and a unique perspective on web projects.
-<br />
-<br />
 
-Feel free to reach out to discuss your web and digital projects. Together, we will bring your ideas to life!
             </p>
           </div>
           </Reveal>

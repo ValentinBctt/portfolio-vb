@@ -12,7 +12,7 @@
   const projects = [
     {
       name: "Create.",
-      description: "Create is a web application for organizing artistic projects. Users can create projects, add tasks, deadlines, notes, and files, all within a comprehensive dashboard. They can also invite other users to join their projects.",
+      description: "Create is a web application for organizing artistic projects. Users can create projects, add tasks, deadlines, notes, and files, all within a comprehensive dashboard. They can also invite other users to join their projects for a flexible organization.",
       image: "assets/projects/Create1.png",
       image2: "assets/projects/Create2.png",
       image3: "assets/projects/Create3.png",
@@ -23,23 +23,18 @@
       link: "https://www.lets-create-app.online/users/sign_in"
     },
     {
-      name: "Project 2",
-      description: "Description of the project 2",
-      image: "assets/carapuce-lunettes-soleil.jpg",
-      image2: "assets/carapuce-lunettes-soleil.jpg",
-      image3: "assets/carapuce-lunettes-soleil.jpg",
+      name: "O-Jaune (almost done)",
+      description: `Website for an music association who organize events and concerts in Bordeaux. The objective of the design was to match the "digital" art direction of the association. This website is a showcase of the events and concerts organized by the association.`,
+      image: "assets/projects/o-jaune1.png",
+      image2: "assets/projects/o-jaune2.png",
+      image3: "assets/projects/o-jaune3.png",
       language1: "React",
-      link: "https://www.google.com"
+      language2: "HTML",
+      language3: "CSS",
+      language4: "Motion",
+      link: "https://o-jaune-41b729964877.herokuapp.com/"
     },
-    {
-      name: "Project 3",
-      description: "Description of the project 2",
-      image: "assets/carapuce-lunettes-soleil.jpg",
-      image2: "assets/carapuce-lunettes-soleil.jpg",
-      image3: "assets/carapuce-lunettes-soleil.jpg",
-      language1: "React",
-      link: "https://www.google.com"
-    }
+
   ];
 
   export function MyProjects() {
@@ -118,7 +113,7 @@
                       <img src={project.image3} className="d-block w-100" alt={project.name} onClick={() => handleImageClick(project)} />
                     </div>
                   </div>
-                  <p className='full-screen'><FontAwesomeIcon icon={faExpand} /></p>
+                  <p className='full-screen' onClick={() => handleImageClick(project)}><FontAwesomeIcon icon={faExpand} /></p>
                   <button className="carousel-control-prev" type="button" data-bs-target={`#carouselExampleIndicators${index}`} data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Previous</span>
