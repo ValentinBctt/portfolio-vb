@@ -19,11 +19,14 @@ import { RevealNavBar } from "./Reveal";
 export default function App() {
   return (
     <div>
+      <div className="home">
       <SlideTabs />
       <HomePage />
+      </div>
       <div id="about-me">
         <AboutMe />
       </div>
+
       <div id="skills">
         <Skills />
       </div>
