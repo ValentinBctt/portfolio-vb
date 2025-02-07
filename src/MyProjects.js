@@ -12,7 +12,7 @@
   const projects = [
 
     {
-      name: "Shook Ones (beta)",
+      name: "Shook Ones (beta desktop)",
       description: "First app of blindtest where you can add different Spotify Playlist and play with all your favorite songs. Working with Oauth2 and the Spotify API, it take all the tracks in the playlists and give you 50 songs from all of them. You can keep the score and see who is the best. ",
       image: "assets/projects/ShookOnes1.png",
       image2: "assets/projects/ShookOnes2.png",
