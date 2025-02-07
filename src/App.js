@@ -1,9 +1,9 @@
 import "./App.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"; // Importation des icônes
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons"; // Import de l'icône "arrow-down"
+import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons"; // Import de l'icône "arrow-down" et "arrow-up"
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { Skills } from "./Skills";
 import { MyProjects } from "./MyProjects";
@@ -23,6 +23,7 @@ export default function App() {
       <SlideTabs />
       <HomePage />
       </div>
+      <ArrowTop />
       <div id="about-me">
         <AboutMe />
       </div>
@@ -43,6 +44,60 @@ export default function App() {
   );
 }
 
+
+function ArrowTop() {
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(false);
+          } else {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    const homeElement = document.querySelector('.home');
+    if (homeElement) {
+      observer.observe(homeElement);
+    }
+
+    return () => {
+      if (homeElement) {
+        observer.unobserve(homeElement);
+      }
+    };
+  }, []);
+
+
+
+
+
+    const scrollToTop = () => {
+      const homeElement = document.querySelector('.home');
+      if (homeElement) {
+        homeElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }
+    };
+    if (!isVisible) {
+      return null;
+    }
+
+  return(
+    <RevealRight>
+    <FontAwesomeIcon className="arrow-top" icon={faArrowUp} onClick={scrollToTop}/>
+    </RevealRight>
+  )
+}
 
 
 
