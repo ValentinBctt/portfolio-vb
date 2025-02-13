@@ -20,7 +20,7 @@
       language1: "React",
       language2: "API",
       language3: "CSS",
-      language4: "JSX",
+      language4: "Node.js",
       link: "https://shook-ones-ab7e5e2c1b17.herokuapp.com/"
     },
     {
