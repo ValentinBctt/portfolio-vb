@@ -72,7 +72,7 @@
                 <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
                   <div className="project">
                     <img src={project.image} className="d-block w-100" alt={project.name} onClick={() => handleImageClick(project)} />
-                    <h4 ><strong>{project.name}</strong></h4>
+                    <h6 ><strong>{project.name}</strong></h6>
                   <p className='full-screen'><FontAwesomeIcon icon={faExpand} /></p>
                     <p>{project.description}</p>
                     <div className="languages">
