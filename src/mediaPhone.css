@@ -1,4 +1,4 @@
-@media (max-width: 767px) {
+@media (max-width: 800px) {
 
   * {
     box-sizing: border-box;
@@ -13,6 +13,8 @@
     padding: 0;
   }
 
+
+
   .navBar {
     margin-left: -5rem!important;
     padding-top: 2rem;
@@ -23,9 +25,22 @@
 
   }
 
+  .about-skills {
+    flex-direction: column!important;
+    align-items: center!important;
+    gap: 0!important;
+    margin-bottom: 5rem!important;
+
+  }
+
+  .box-skills, .box-about{
+    margin: 1rem !important;
+
+  }
+
 
   .name h1 {
-    margin-top: 13rem!important;
+    margin-top: 4rem!important;
     font-size: 3rem!important;
     margin-left: -8rem;
   }
@@ -46,8 +61,8 @@
 
 
   .arrow-down {
-    margin-top: 5rem!important;
-    margin-bottom: 10rem!important;
+    margin-top: 2rem!important;
+    margin-bottom: 2rem!important;
   }
 
   .box {
@@ -62,7 +77,10 @@
   gap: 0;
   flex-direction: column; /* Par défaut, mettre l'image au-dessus du texte */
   align-items: center; /* Centrer horizontalement */
+}
 
+.box-about {
+  width: 150%!important;
 }
 
 .photo {
@@ -90,11 +108,13 @@
 }
 
 .skills {
-  width: 50%!important;
-  margin-right: 5rem!important;
-  margin-left: 1.5rem!important;
-  grid-template-columns: repeat(2, 1fr) !important;
-  padding: 0!important;
+
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 1rem 5rem!important;
+  justify-items: center !important;
+  align-items: start !important;
+
 }
 
 .skill {
@@ -155,7 +175,9 @@
 }
 .resume a {
   font-size: 1rem!important;
-  padding: 0.3rem 0.5rem!important;
+  padding: 1rem 2rem!important;
+  gap: 1rem !important;
+  margin: 2rem 0;
 }
 
 .contact p {
@@ -207,9 +229,6 @@
 
 @media (min-width: 768px) and (max-width: 1150px) {
 
-  .skills {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
 
   .training {
     display: flex!important;

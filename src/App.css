@@ -48,7 +48,7 @@ html, body {
   width: 100%;
   height: 100%;
   overflow-x: hidden; /* Empêche les débordements horizontaux */
-  
+
 }
 
 
@@ -129,12 +129,43 @@ h4{
   height: 100vh;
 }
 
-.box {
+.box, .box-about, .box-skills, .box-contact-resume {
   background-color: var(--dark-green);
-  padding: 2rem;
+  padding: 5rem 2rem;
   border-radius: 10px;
   margin: 2rem 4rem;
   box-shadow: 2px 4px 10px 0px rgba(33, 33, 33, 0.8);
+  margin-bottom: 15rem;
+
+}
+
+.about-skills {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch; /* force les enfants à prendre la même hauteur */
+}
+
+.box-about {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.box-about,
+.box-skills {
+  margin-top: 10rem;
+  flex: 1 1 0; /* prennent chacune la même part d'espace */
+  width: auto !important;
+  min-width: 300px; /* limite pour éviter d'être trop petites sur mobile */
+  display: flex;
+  flex-direction: column; /* garde le contenu vertical à l'intérieur */
+}
+
+.box-contact-resume {
+  margin: 3rem 0 0 0;
+  padding: 10rem 0;
+  border-radius: 0;
 }
 
 
@@ -145,7 +176,7 @@ h4{
 }
 .name h1 {
   font-family: 'TanNimbus';
-  font-size: 4rem;
+  font-size: 6rem;
   font-weight: 400;
   color: var(--beige);
   letter-spacing: 2px;
@@ -153,11 +184,11 @@ h4{
 
 .name h2 {
   font-family: 'TanNimbus';
-  font-size: 1.5rem!important;
+  font-size: 2.5rem!important;
   font-weight: 400;
   color: var(--beige);
   margin-top: 3rem!important;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
 }
 
 .bar {
@@ -229,20 +260,11 @@ h4{
 
 .about-me {
   display: flex;
+  flex-direction: column;
   gap: 0;
 
 }
-.photo {
-  border-radius: 100%;
-  height: 200px;
-  width: 200px;
-  object-fit: cover;
-  margin: auto 5rem auto 0;
 
-  flex-shrink: 0;
-
-
-}
 
 .about-me p {
   padding: 0 0 0 5rem;
@@ -255,14 +277,18 @@ h4{
   margin-right: 5rem;
 }
 
+.about-skills {
+  display: flex;
+  gap: 3rem;
+}
+
 /* SKILLS */
 .skills {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* Crée 4 colonnes de largeur égale */
-  gap: 1rem; /* Espace entre les éléments */
-  margin-left: 5rem;
-  margin-right: 10rem;
-
+  display: flex;
+  flex-wrap: wrap; /* permet le passage à la ligne */
+  gap: 2rem;       /* espace entre les éléments */
+  margin: 0 3rem;  /* simplifie les marges gauche/droite */
+  /* ou mieux : padding si tu veux l'espace intérieur */
 }
 
 .skill {
@@ -274,6 +300,7 @@ h4{
   height: 3.5rem;
   width: 10rem;
   padding-left: 1rem;
+  margin-top: 2rem;
 
 
 }
@@ -305,6 +332,7 @@ h6 {
   font-family: "Outfit";
   font-weight: 100;
   margin: 1rem!important;
+  
 }
 .projects {
   display: grid;
@@ -313,18 +341,20 @@ h6 {
   margin-left: 5rem;
   margin-right: 5rem;
   margin-top: 2rem;
+  height: 60vh;
 }
 
 .project {
   background-color: var(--green);
   border-radius: 10px;
   width: 35%;
+  height: 60vh;
   box-shadow: 2px 4px 10px 0px rgba(33, 33, 33, 0.8);
   transition: 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 30rem;
+
   position: relative; /* Ajouté pour permettre le positionnement absolu de .full-screen */
 
   &:hover {
@@ -344,7 +374,7 @@ h6 {
 .project p {
   padding-left: 1em;
   padding-right: 1rem;
-  font-size: small !important;
+  font-size: 1rem !important;
 }
 
 .project a {
@@ -484,6 +514,7 @@ padding: 0 8rem;
 .course p {
   margin: 0 !important;
 
+
 }
 
 .course {
@@ -526,7 +557,7 @@ padding: 0 8rem;
 }
 
 .selected-course p {
-  font-size: 0.8rem!important ;
+  font-size: 1rem!important ;
 }
 
 .selected-course img {
@@ -551,7 +582,7 @@ h3, h4 {
 
 .contact-resume {
   display: flex;
-  gap: 3rem;
+  gap: 10rem;
   margin-top: 2rem;
   align-items: center; /* Optionnel, aligne verticalement les éléments au centre */
   justify-content: center
@@ -568,7 +599,7 @@ h3, h4 {
   padding: 0.5rem 1rem;
   display: inline-flex; /* S'assure que le lien est un élément en ligne pour être aligné avec le texte */
   align-items: center; /* Pour centrer l'icône et le texte à l'intérieur du lien */
-  gap: 0.5rem; /* Espace entre l'icône et le texte */
+  gap: 3rem; /* Espace entre l'icône et le texte */
 
   &:hover {
     background-color: var(--beige);

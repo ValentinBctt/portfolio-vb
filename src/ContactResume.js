@@ -5,7 +5,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 export function ContactResume() {
   return (
-    <div className="box">
+    <div className="box-contact-resume">
       <h3>Contact & Resume</h3>
 
     <div className="contact-resume">

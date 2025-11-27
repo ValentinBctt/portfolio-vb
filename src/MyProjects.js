@@ -11,6 +11,18 @@
 
   const projects = [
 
+        {
+      name: "Maison Cookoon",
+      description: "Maison Cookoon is a showcase website I developed to highlight the brand's universe. I focused on creating a clear and intuitive interface, with smooth navigation and subtle animations to enhance the user experience. The design was crafted to be harmonious and immersive, while remaining easy to navigate on both desktop and mobile.",
+      image: "assets/projects/Cookoon1.png",
+      image2: "assets/projects/Cookoon2.png",
+      image3: "assets/projects/Cookoon3.png",
+      language1: "React",
+      language2: "Rails",
+      language3: "CSS",
+      language4: "JS",
+      link: "https://www.maisoncookoon.com/"
+    },
     {
       name: "Shook Ones (beta desktop)",
       description: "First app of blindtest where you can add different Spotify Playlist and play with all your favorite songs. Working with Oauth2 and the Spotify API, it take all the tracks in the playlists and give you 50 songs from all of them. You can keep the score and see who is the best. ",
@@ -23,18 +35,7 @@
       language4: "Node.js",
       link: "https://shook-ones-ab7e5e2c1b17.herokuapp.com/"
     },
-    {
-      name: "Create.",
-      description: "Create is a web application for organizing artistic projects. Users can create projects, add tasks, deadlines, notes, and files, all within a comprehensive dashboard. They can also invite other users to join their projects for a flexible organization.",
-      image: "assets/projects/Create1.png",
-      image2: "assets/projects/Create2.png",
-      image3: "assets/projects/Create3.png",
-      language1: "Rails",
-      language2: "HTML",
-      language3: "CSS",
-      language4: "JS",
-      link: "https://www.lets-create-app.online/users/sign_in"
-    },
+
     {
       name: "O-Jaune (almost done)",
       description: `Website for an music association who organize events and concerts in Bordeaux. The objective of the design was to match the "digital" art direction of the association. This website is a showcase of the events and concerts organized by the association.`,
@@ -71,7 +72,7 @@
                 <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
                   <div className="project">
                     <img src={project.image} className="d-block w-100" alt={project.name} onClick={() => handleImageClick(project)} />
-                    <h6><strong>{project.name}</strong></h6>
+                    <h4 ><strong>{project.name}</strong></h4>
                   <p className='full-screen'><FontAwesomeIcon icon={faExpand} /></p>
                     <p>{project.description}</p>
                     <div className="languages">

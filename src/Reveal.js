@@ -1,7 +1,18 @@
-import { useRef, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from "react";
 import { useInView } from 'react-intersection-observer';
 import { useAnimation, motion } from 'framer-motion';
-import { useState } from 'react';
+
+const getScrollContainer = () => {
+  // During SSR window is undefined; return a safe stub in that environment.
+  if (typeof window === 'undefined') {
+    return {
+      addEventListener: () => {},
+      removeEventListener: () => {},
+    };
+  }
+  // Prefer the document's scrolling element when available, otherwise fallback to window.
+  return document.scrollingElement || window;
+};
 
 export const Reveal = ({ children, width = "fit-content" }) => {
   const ref = useRef(null);
@@ -245,6 +256,53 @@ export const RevealIcon = ({ children, width = "fit-content" }) => {
       >
         {children}
       </motion.div>
+    </div>
+  );
+};
+
+
+
+
+
+export const SimpleParallax = ({ children, speed = 0.3, maxTranslate = 120 }) => {
+  const wrapperRef = useRef(null);
+
+  useEffect(() => {
+    const element = wrapperRef.current;
+    if (!element) return;
+
+    let animationFrameId;
+
+    const update = () => {
+      const rect = element.getBoundingClientRect();
+      const windowH = window.innerHeight;
+
+      const elemCenter = rect.top + rect.height / 2;
+      const distanceFromCenter = elemCenter - windowH / 2;
+
+      let translateY = -distanceFromCenter * speed;
+      translateY = Math.max(-maxTranslate, Math.min(maxTranslate, translateY));
+
+      element.style.transform = `translateY(${translateY}px)`;
+
+      animationFrameId = requestAnimationFrame(update);
+    };
+
+    update();
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [speed, maxTranslate]);
+
+  return (
+    <div
+      ref={wrapperRef}
+      style={{
+        display: "block",
+        width: "50%",
+        willChange: "transform",
+      }}
+    >
+      {children}
     </div>
   );
 };
