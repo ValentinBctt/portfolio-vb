@@ -10,7 +10,7 @@ export function ContactResume() {
 
     <div className="contact-resume">
       <div className="resume">
-      <a href="./assets/Cv Valentin Bracchetti - Front-end Developer.pdf" download="Cv Valentin Bracchetti - Front-end Developer.pdf">
+      <a href="./assets/CV Valentin Bacchetti.pdf" download="CV Valentin Bacchetti.pdf">
       <FontAwesomeIcon icon={faDownload} />Download my resume
     </a>
         </div>

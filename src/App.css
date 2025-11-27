@@ -332,7 +332,7 @@ h6 {
   font-family: "Outfit";
   font-weight: 100;
   margin: 1rem!important;
-  
+
 }
 .projects {
   display: grid;
@@ -599,7 +599,7 @@ h3, h4 {
   padding: 0.5rem 1rem;
   display: inline-flex; /* S'assure que le lien est un élément en ligne pour être aligné avec le texte */
   align-items: center; /* Pour centrer l'icône et le texte à l'intérieur du lien */
-  gap: 3rem; /* Espace entre l'icône et le texte */
+  gap: 1rem; /* Espace entre l'icône et le texte */
 
   &:hover {
     background-color: var(--beige);

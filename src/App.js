@@ -226,7 +226,7 @@ function HomePage() {
       </Reveal>
           </h1>
           <Reveal delay={0.4}>
-          <h2>Front-end Developer</h2>
+          <h2>Full-Stack Developer</h2>
           </Reveal>
         </div>
       <div className="bar">
