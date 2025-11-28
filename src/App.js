@@ -24,6 +24,7 @@ export default function App() {
       <SlideTabs />
       <HomePage />
       </div>
+      <div className="content">
       <ArrowTop />
       <div id="about-me">
         <AboutMe />
@@ -39,6 +40,7 @@ export default function App() {
       <div id="contact-resume">
         <ContactResume />
       </div>
+    </div>
     </div>
   );
 }
@@ -250,14 +252,7 @@ function HomePage() {
           </h4>
         </RevealIcon>
       </div>
-      <div className="arrow-down-container">
-          <RevealArrow>
-        <div className="arrow-down">
-          <FontAwesomeIcon icon={faArrowDown} className="icon-down cursor-pointer" onClick={() => handleScroll('about-me')}/>{" "}
-          {/* Icône "arrow-down" */}
-        </div>
-          </RevealArrow>
-      </div>
+
     </>
   );
 }

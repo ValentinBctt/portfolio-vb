@@ -127,6 +127,15 @@ h4{
 
 .home {
   height: 100vh;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* lower than sections that should overlay it */
+
+  /* Empêche le contenu interne de défiler et évite la propagation du défilement vers la page */
+  overflow: hidden;
+  overscroll-behavior: contain;
 }
 
 .box, .box-about, .box-skills, .box-contact-resume {
@@ -141,13 +150,25 @@ h4{
 
 .about-skills {
   display: flex;
-  gap: 2rem;
-  align-items: stretch; /* force les enfants à prendre la même hauteur */
+  gap: 3rem; /* use intended spacing */
+  align-items: stretch;
+  /* keep normal flow so scrolling works; z-index stays high so it overlays the header when scrolled */
+  margin-top: 0;
+  padding-top: 5rem;
+  position: relative;
+  z-index: 20; /* higher than .home so it overlays when scrolling */
 }
 
 .box-about {
   display: flex;
   flex-direction: column;
+
+}
+
+.content {
+  position: relative;
+  z-index: 1000;
+  background-color: var(--green);
 }
 
 
@@ -358,7 +379,7 @@ h6 {
   position: relative; /* Ajouté pour permettre le positionnement absolu de .full-screen */
 
   &:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 }
 
@@ -418,8 +439,8 @@ h6 {
   justify-content: center; /* Centre horizontalement */
   border: solid 1px var(--beige);
   border-radius: 20px;
-  width: 3rem;
-  height: 1.5rem;
+  width: 4rem;
+  height: 1.8rem;
   margin-right: 0.7rem;
   margin-bottom: 2rem;
 
