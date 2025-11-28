@@ -167,7 +167,7 @@ h4{
 
 .content {
   position: relative;
-  z-index: 1000;
+  z-index: 100;
   background-color: var(--green);
 }
 
@@ -469,12 +469,34 @@ h6 {
   color: var(--green) !important;
 }
 
-.modal-content {
-  background-color: transparent !important;
-  border: none; /* Supprimez la bordure si nécessaire */
-  box-shadow: none; /* Supprimez l'ombre si nécessaire */
+.modal {
+  z-index: 2000 !important;
+  position: fixed !important;
 }
 
+.modal.show {
+  z-index: 2001 !important;
+}
+
+.modal-backdrop.show {
+  z-index: 10 !important;
+  position: fixed !important;
+}
+
+/* contenu modal */
+.modal-dialog {
+  max-width: 80%;
+  z-index: 2002 !important;
+  position: relative !important;
+}
+
+.modal-content {
+  background-color: transparent !important;
+  border: none;
+  box-shadow: none;
+}
+
+/* header */
 .modal-header {
   background-color: var(--green);
   color: var(--beige);
@@ -482,14 +504,13 @@ h6 {
   border: none !important;
 }
 
+/* body */
 .modal-body {
   background-color: var(--dark-green);
   border-radius: 0 0 10px 10px;
 }
 
-.modal-dialog {
-  max-width: 80%; /* Ajustez la taille de la modal */
-}
+
 
 .full-screen {
   position: absolute;
